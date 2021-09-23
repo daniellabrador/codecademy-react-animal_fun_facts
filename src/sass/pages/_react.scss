@@ -1,7 +1,46 @@
 @import "./boilerplate";
 
 main section {  //--------------------------------------------------------------
-
+  p {
+    font-weight: normal;
+  }
+  
+  a {
+    position: relative;
+    top: -.015em;
+    padding: .125em 0em;
+    color: #333;
+  
+    &:hover {
+      transition: all .25s;
+      padding: .25em 0em;
+      color: white;
+      text-decoration: none;
+    }
+  
+    &:not(:hover) {
+      transition: all .25s;
+    }
+  
+    &::after {
+      content: '';
+      position: absolute;
+      bottom: -2%;
+      right: -2%;
+      width: 104.5%;
+      height: 100%;
+    }
+  
+    &:hover::after {
+      transition: background-color .25s;
+      background-color: #2fb3ff;
+      z-index: -1;
+    }
+  
+    &:not(:hover)::after {
+      transition: background-color .25s;
+    }
+  }
 
 h1 {
   margin-top: 2em;

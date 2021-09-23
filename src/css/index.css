@@ -1129,6 +1129,40 @@ header .main-logo {
     padding: 1rem;
   }
 }
+main section p {
+  font-weight: normal;
+}
+main section a {
+  position: relative;
+  top: -0.015em;
+  padding: 0.125em 0em;
+  color: #333;
+}
+main section a:hover {
+  transition: all 0.25s;
+  padding: 0.25em 0em;
+  color: white;
+  text-decoration: none;
+}
+main section a:not(:hover) {
+  transition: all 0.25s;
+}
+main section a::after {
+  content: "";
+  position: absolute;
+  bottom: -2%;
+  right: -2%;
+  width: 104.5%;
+  height: 100%;
+}
+main section a:hover::after {
+  transition: background-color 0.25s;
+  background-color: #2fb3ff;
+  z-index: -1;
+}
+main section a:not(:hover)::after {
+  transition: background-color 0.25s;
+}
 main section h1 {
   margin-top: 2em;
   margin-bottom: 0;
